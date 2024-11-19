@@ -4,11 +4,13 @@ export default function Home() {
       <div className="bg-white w-full shadow-lg p-5 rounded-3xl max-w-screen-sm flex flex-col gap-2 md:flex-row">
         <input
           className="w-full rounded-full h-12 bg-gray-200 pl-5 outline-none ring ring-orange-300 ring-offset-2 ring-offset-transparent focus:ring-orange-500
-          foncus:ring-offset-2 transition-shadow placeholder:text-red-600"
+          foncus:ring-offset-2 transition-shadow placeholder:text-red-600 invalid:bg-red-100 invalid:focus:ring-blue-500
+          invalid:md:focus:ring-red-500 peer"
           type="text"
+          required
           placeholder="Search here ..."
         />
-        <button className="bg-black text-white py-2 rounded-full active:scale-90 focus:scale-90 transition-transform font-medium outline-none md:px-10 bg-gradient-to-tr from-cyan-500 via-yellow-300 to-purple-400">
+        <button className="bg-black text-white py-2 rounded-full active:scale-90 focus:scale-90 transition-transform font-medium outline-none md:px-10 peer-invalid:bg-red-100 peer-required:bg-green-500">
           Search
         </button>
       </div>
