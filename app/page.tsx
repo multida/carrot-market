@@ -5,12 +5,15 @@ export default function Home() {
         <input
           className="w-full rounded-full h-12 bg-gray-200 pl-5 outline-none ring ring-orange-300 ring-offset-2 ring-offset-transparent focus:ring-orange-500
           foncus:ring-offset-2 transition-shadow placeholder:text-red-600 invalid:bg-red-100 invalid:focus:ring-blue-500
-          invalid:md:focus:ring-red-500 peer"
-          type="text"
+          invalid:md:focus:ring-green-500 peer"
+          type="email"
           required
-          placeholder="Search here ..."
+          placeholder="Email address"
         />
-        <button className="bg-black text-white py-2 rounded-full active:scale-90 focus:scale-90 transition-transform font-medium outline-none md:px-10 peer-invalid:bg-red-100 peer-required:bg-green-500">
+        <span className="text-red-500 font-medium hidden peer-invalid:block">
+          Email is required.
+        </span>
+        <button className="bg-black text-white py-2 rounded-full active:scale-90 focus:scale-90 transition-transform font-medium outline-none md:px-10">
           Search
         </button>
       </div>
