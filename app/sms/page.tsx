@@ -10,14 +10,16 @@ export default function SMSLogin() {
       </div>
       <form className="flex flex-col gap-3">
         <FormInput
-          type="number"
-          placeholder="Phone number"
+          name="email"
+          type="email"
+          placeholder="Email"
           required
           errors={[]}
         />
         <FormInput
-          type="number"
-          placeholder="Verification code"
+          name="password"
+          type="password"
+          placeholder="Password"
           required
           errors={[]}
         />
