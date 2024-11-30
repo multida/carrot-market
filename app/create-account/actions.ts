@@ -105,6 +105,7 @@ export async function createAccount(prevState: any, formData: FormData) {
     const cookie = await getIronSession(cookies(), {
       cookieName: "delicious-karrot",
       password: process.env.COOKIE_PASSWORD!,
+      // 느낌표는 null, undefined가 아니라고 알려주는 역할
     });
     //@ts-ignore
     cookie.id = user.id;
