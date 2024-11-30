@@ -101,6 +101,7 @@ export async function createAccount(prevState: any, formData: FormData) {
       },
     });
     // log the user in
+    //@ts-ignore
     const cookie = await getIronSession(cookies(), {
       cookieName: "delicious-karrot",
       password: process.env.COOKIE_PASSWORD!,
