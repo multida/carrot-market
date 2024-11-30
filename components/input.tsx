@@ -11,7 +11,6 @@ export default function Input({
   ...rest
 }: InputProps & InputHTMLAttributes<HTMLInputElement>) {
   //input attributes가 다 들어있음
-  console.log(rest);
   return (
     <div className="flex flex-col gap-2">
       <input
