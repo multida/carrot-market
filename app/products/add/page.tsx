@@ -15,7 +15,25 @@ export default function AddProduct() {
     if (!files) {
       return;
     }
+    if (!files || files.length === 0) {
+      return;
+    }
     const file = files[0];
+
+    // Check image
+    if (!file.type.startsWith("image/")) {
+      console.log("please upload image");
+      return;
+    }
+    // Check image size
+    const maxSizeMB = 3;
+    const maxSizeBytes = maxSizeMB * 1024 * 1024;
+    if (file.size > maxSizeBytes) {
+      console.log(
+        `${file.size} size too big! size should be less than ${maxSizeMB}`
+      );
+    }
+
     const url = URL.createObjectURL(file);
     setPreview(url);
   };
