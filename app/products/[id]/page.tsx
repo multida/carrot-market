@@ -72,7 +72,7 @@ export default async function ProductDetail({
           <h3>{product.user.username}</h3>
         </div>
       </div>
-      <div className="p-5">
+      <div className="p-5 pb-10">
         <h1 className="text-2xl font-semibold">{product.title}</h1>
         <p>{product.description}</p>
       </div>
